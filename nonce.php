@@ -167,7 +167,6 @@ class Nonce
    **/
   public function getNonce($timestamp, $uid, $content = '', $length = NULL)
   {
-    global $site;
     $hash = hash($this->hash, $timestamp . $this->secret . $uid . $content);
     $i = 0;
     do{
